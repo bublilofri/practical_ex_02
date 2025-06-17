@@ -168,7 +168,7 @@ public class FibonacciHeap {
 	 *
 	 */
 	public void meld(FibonacciHeap heap2) {
-		if (heap2 == null || heap2.min == null)
+		if (heap2 == null || heap2.min == null || heap2 == this)
 			return;
 		if (this.min == null) {
 			this.min          = heap2.min;
