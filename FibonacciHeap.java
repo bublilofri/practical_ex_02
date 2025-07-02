@@ -308,10 +308,14 @@ public class FibonacciHeap {
 		x.parent = null;
 		x.next = x.prev = x;
 		spliceIntoRootList(x, min);
-		x.lost = 0;
-		p.lost++;
-		totalCuts++;
 		trees++;
+		x.lost = 0;
+		if (p.parent != null) {
+			p.lost++;
+		}
+
+		totalCuts++;
+
 	}
 
 	private int upperBoundDegree() {
